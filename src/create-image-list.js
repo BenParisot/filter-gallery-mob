@@ -12,6 +12,9 @@ export function createImageList(image) {
 
 export default function loadImage(images) {
     const imageListNode = document.getElementById('image-list');
+    while(imageListNode.children.length > 0) {
+        imageListNode.removeChild(imageListNode.lastChild);
+    }
     images.forEach(image => {
         const imageLi = createImageList(image);
         imageListNode.appendChild(imageLi);

@@ -1,3 +1,5 @@
+// import images from '../data/images.js';
+
 function imageFilter(imageArray, filter) {
     return imageArray.filter(image => {
         const hasKeyword = !filter.keyword || image.keyword === filter.keyword;
