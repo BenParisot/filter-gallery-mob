@@ -1,3 +1,5 @@
+import imageFilter from '../src/image-filter.js';
+
 const test = QUnit.test;
 
 const imageArray = [
@@ -6,13 +8,6 @@ const imageArray = [
     { keyword: 'unicorn', horns: 2 }
 ];
 
-function imageFilter(imageArray, filter) {
-    return imageArray.filter(image => {
-        const hasKeyword = !filter.keyword || image.keyword === filter.keyword;
-        const hasHorns = !filter.horns || image.horns >= filter.horns;
-        return hasKeyword && hasHorns;
-    });
-}
 
 test('filter by keyword rhino', function(assert) {
     //arrange
