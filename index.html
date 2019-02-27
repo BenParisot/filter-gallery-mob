@@ -4,32 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Gallery with Filter!</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <header>
         <h1>Filtered Photo Gallery</h1>
     </header>
     <main>
-        <ul id="image-list">
-            <li>
-                <h2>UniWhal</h2>
-                <img src="http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg">
-                <p id="horns">Horns: 1</p>
-            </li>
-            <li>
-                <h2>Rhino Family</h2>
-                <img src="https://images.unsplash.com/photo-1512636618879-bbe79107e9e3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd9460ee6d1ddbb6b1ca7be86dfc4590&auto=format&fit=crop&w=1825&q=80">
-                <p id="horns">Horns: 2</p>
-            </li>
-            <li>
-                <h2>Unicorn Head</h2>
-                <img src="https://www.dhresource.com/0x0s/f2-albu-g5-M00-1A-11-rBVaI1hsIIiALxKzAAIHjSU3VkE490.jpg/wholesale-halloween-costume-prop-unicorn.jpg">
-                <p id="horns">Horns: 1</p>
-        </li>
-        </ul>
+        <form id="filter-form">
+            <label>
+                Keyword
+                <input type="text" name="keyword">
+            </label>
+            <label>
+                Horns
+                <input type="number" name="horns">
+            </label>
+            <button>Filter</button>
+        </form>
+        <ul id="image-list"></ul>
     </main>
     <footer>
         <p>&copy: The Best Team Ever 2019</p>
     </footer>
+    <script type="module" src="./src/index.js"></script>
 </body>
 </html>
